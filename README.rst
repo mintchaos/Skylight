@@ -1,21 +1,27 @@
 Skylight is a Textual irc style. http://www.codeux.com/textual/
+
 It makes me happy.
 
 To install dump this folder into ~/Library/Application Support/Textual/Styles
 
+It looks like this: 
 
-Note:
-=====
+.. image:: http://img.skitch.com/20101029-n44seaf65ph3nd861dbear9e5y.png
 
-You should be using the default (crappy) time stamps in this format:
+
+Important notes and warnings:
+============================
+
+You need be using the default time stamps in this format:
 [%m/%d/%Y -:- %I:%M:%S %p]
 
 At this point Textual uses the the timestamp as set in the preferences for the
 logs. This theme is opinionated about time stamps and edits them via JS but
 expects them to start in this format.
 
-Also note that Skylight screws with the DOM and switching to other styles from 
-skylight may require a restart or some other form or resetting the current channels.
+Also note that Skylight screws with the DOM and switching to skylight or from
+Skylight and other styles may require a restart or some other form or
+resetting the current channels.
 
 
 
