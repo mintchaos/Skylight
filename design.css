@@ -1,0 +1,373 @@
+/* Basic Body Structure */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+  	word-wrap: break-word;
+}	
+
+body {
+	color: #000;
+	height: 100%;
+ 	z-index: 100;
+	font-size: 12px;
+	overflow: hidden;
+	overflow-y: visible;
+	background-color: #fff;
+	font-family: "Lucida Grande";
+}
+
+body div#body_home {
+  left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+  max-height: 97.5%;
+  position: absolute;
+}
+body div#body_home:after { /* Clear fix */ content:  ".";   display: block;  height: 0;  clear: both;  visibility: hidden; }
+body div#body_home { /* IE fix */ zoom: 1; }
+
+
+body div#body_home div {
+/*  margin-top: -1px;*/
+}
+
+body div#body_home p {
+	clear: both;
+	position: relative;
+	margin-left:0 !important;
+	text-indent:0 !important;
+}
+
+/* Time */
+
+body .date  { font-size: 11px ;
+   text-align: center; 
+   color: #555; 
+   width: 7em;
+   margin: 1em 0 1em 50%;
+   position: relative;
+   left: -3.5em;
+   padding: 3px 3px 4px 3px; 
+   background: #eee;
+/*   border-top: 1px dotted #ddd; */
+/*   border-bottom: 1px dotted #ddd;*/
+   border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px;
+   text-shadow: 0px -1px 1px #fff;
+}
+body .time {
+  float: right;
+  width: 5em !important;
+  margin-right: -7em;
+	color: #aaa;
+	text-indent: 0;
+	word-wrap: normal;
+	white-space: nowrap
+	display: inline-block;
+}
+
+/* Links */
+
+a, a:link {
+  color: #1788DF;
+  border-color: #27D6EB;
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+
+a:hover {
+  color: #2BD0FF;
+  border-color: #011124;
+}
+
+/* Topic Bar */
+
+#topic_bar {
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #333;
+  z-index: 400;
+/*  opacity: 0.95;*/
+  font-size: 10px;
+  text-align: center;
+  position: fixed;
+  background: #efefef -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.81, rgb(239,239,239)),
+      color-stop(1, rgb(250,250,250))
+  );
+  padding: 3px 0.5em 3px;
+  border-bottom: 1px solid #999;
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.4);
+
+  
+}
+
+#topic_bar a {
+  color: #00e;
+  border-color: #00e;
+}
+
+#topic_bar a:hover {
+  color: #0080FF;
+  border-color: #0080FF;
+}
+
+/* Images */
+
+body a img {
+    border: 0;
+}
+
+body img {
+    display: block;
+    max-width: 95%;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-bottom: 5px;
+}
+
+/* Remember Line */
+
+div[id=mark] {
+  position: relative;
+  z-index: 295;
+  margin: 6px 0 4px 0 !important;
+  height: 5px;
+  opacity: 0.8;
+  background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00'%00%00%00%06%08%06%00%00%00%40S%87%A6%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%00%E2IDATx%DA%CC%92%D1%0D%830%0CD1%01%FA%D9%19%D8%93%0E%D2%E9X%A3%24%18%9A%A0g%E9%84%3A%40%23%9Dp%CE%CE9%3Eb%CB%F2z%CF%F3%DC%B5%B5%AEk%F7O%B1U%3C%2Bv%E2%B6%86%0A%AF%E8%2BNr%09%BE%ED3u%8F%8A%83%FC%04%979%97%C8%9D%A0'%7F%D2%C7%89%07%F8%5D%F4%03S4%0D%B1%0E!%07%BB4s%84w%0E%17%BE.%DC)%839z%26%BAYb%ED%17%03%F4%D4_%5C%12%22S%B4%FD%B8l%91%0B%99L%E9%B8V%88%07%CE%C5%99p%BD%D5~d%D0rs3j%9D%B8%AD-%D1%AC%88%C5%87X%AF%970%E1%5D%B8%88%938%A5%1A%87%0C%AEn%86%11%ED%3B%DE%FE%CA%D5%CBx%3B%19q%93w%D6%CB%AF%0A%5E%85Gy%2F%E9%F6%1CF%06%8E%9A%8E%7D%12W%8D%BC%0E%A2%A6%D8W%80%01%00%EA%7B%88)%23%1E%02%11%00%00%00%00IEND%AEB%60%82") ;
+  border-bottom: 1px solid transparent;
+/*  -webkit-border-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#F5F4F2), to(#F5F4F2), color-stop(.3,#3FADAD), color-stop(.7,#972694));*/
+  border-bottom: 1px solid -webkit-gradient(linear, 0% 0%, 100% 0%, from(#F5F4F2), to(#ddd), color-stop(.1,#ffffff), color-stop(.9,#ffffff));
+/*  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#F5F4F2), to(#F5F4F2), color-stop(.3,#3FADAD), color-stop(.7,#972694));*/
+  -webkit-transition: 0.2s linear;
+}
+
+/* Nickname Colors */
+
+body div[type=privmsg] .sender[type=myself],
+body div[type=action] .sender[type=myself] { 
+  color: #9C00AA; 
+}
+
+body div#body_home p { margin-left: 10em !important; margin-right: 7em; }
+
+body .sender[type=normal], body .sender[type=myself] { 
+  margin-left: -10em; float: left; width: 9.5em; text-align: right; font-weight: normal !important; 
+  cursor: pointer;
+}
+
+.repeating_author .sender[type=normal], .repeating_author .sender[type=myself] {
+  visibility: hidden;
+}
+
+body .sender[type=normal][colornumber='0'] { color: #1C53A8; }
+body .sender[type=normal][colornumber='1'] { color: #2EA700; }
+body .sender[type=normal][colornumber='2'] { color: #AC005C; }
+body .sender[type=normal][colornumber='3'] { color: #9D00C9; }
+body .sender[type=normal][colornumber='4'] { color: #499C00; }
+body .sender[type=normal][colornumber='5'] { color: #7F4FFF; }
+body .sender[type=normal][colornumber='6'] { color: #8BC100; }
+body .sender[type=normal][colornumber='7'] { color: #7200CD; }
+body .sender[type=normal][colornumber='8'] { color: #970007; }
+body .sender[type=normal][colornumber='9'] { color: #1238B8; }
+body .sender[type=normal][colornumber='10'] { color: #136666; }
+body .sender[type=normal][colornumber='11'] { color: #904000; }
+body .sender[type=normal][colornumber='12'] { color: #808000; }
+body .sender[type=normal][colornumber='13'] { color: #2092AE; }
+body .sender[type=normal][colornumber='14'] { color: #1909AF; }
+body .sender[type=normal][colornumber='15'] { color: #985D00; }
+
+
+/* NOTICE/CTCP/WALLOPS */
+
+body div[type=notice],
+body div[type=ctcp],
+body div[type=wallops] {
+	color: #f00;
+  	z-index: 191;
+  	position: relative;
+}
+body div[type=notice] .message,
+body div[type=ctcp] .message,
+body div[type=wallops] .message {
+  border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;
+  padding: 2px 5px 2px 5px;
+	background: #FDE3E3;
+/*  border: 1px solid #FA9B9D;*/
+}
+
+body div[type=notice] .sender {
+	color: #f00;
+	font-weight: 700;
+}
+
+/* PRIVMSG */
+
+body div[type=privmsg][highlight=false]  {
+ 	padding: 4px 5px 2px 5px;
+}
+body div.repeating_author[type=privmsg][highlight=false]  {
+ padding-top: 0;
+ padding-bottom: 2px;
+}
+
+body div[type=privmsg][highlight=true],
+body div[type=action][highlight=true] {
+	font-weight: normal;
+ 	padding: 2px 5px 1px 5px;
+	background-color: rgba(220, 210, 255, 0.3) !important;
+}
+
+body div[type=privmsg][highlight=true] .message,
+body div[type=action][highlight=true] .message {
+	color: black;  
+}
+
+[highlight=false] + [highlight=true]  {
+  border-top: 1px solid rgba(220, 210, 255, 0.3); 
+}
+[highlight=true] + [highlight=false]   {
+  border-top: 1px solid rgba(220, 210, 255, 0.6); 
+}
+
+body div div[type=privmsg].temphightlight,
+body div div[type=action].temphightlight {
+  background: #FFF9D8 !important;
+}
+body div div[type=privmsg][highlight=true].temphightlight,
+body div div[type=action][highlight=true].temphightlight {
+  background: #F8EE9C !important;
+}
+
+
+
+body div[type=privmsg] .message {
+	color: #444;
+}
+
+body div[type=privmsg] .sender {
+	font-weight: 700;
+}
+
+/* ACTION */
+
+body div[type=action]  {
+ 	padding: 3px 5px 3px 5px;
+}
+
+body div[type=action] .message {
+/*  color: #666;*/
+}
+
+body div[type=action] .sender {
+	font-weight: 700;
+}
+
+body div div[type="privmsg"] p[type=myself] .message, 
+body div[type=action] p[type=myself] .message {
+	color: #5B5463;
+}
+
+body div[type=action] .sender:before {
+	content: "»";
+	margin-right: 0.4em;
+}
+
+body div[type=action] .sender:after {
+	content: "";
+}
+
+/* REPLY/SYSTEM/ERROR/DCC/DEBUG/INVITE */
+
+body div[type=invite],
+body div[type=reply],
+body div[type=system],
+body div[type=error],
+body div[type=error_reply],
+body div[type=dcc_send_send],
+body div[type=dcc_send_receive],
+body div[type=debug_send],
+body div[type=debug_receive] {
+	color: #777;
+  	z-index: 190;
+	background: #eee;
+  	position: relative;
+ 	padding: 2px 5px 2px 5px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+/* GENERAL EVENT */
+
+body div[type=join],
+body div[type=part],
+body div[type=kick],
+body div[type=quit],
+body div[type=kill],
+body div[type=nick],
+body div[type=mode],
+body div[type=topic] {
+  padding: 2px 5px 2px 5px;
+    color: #aaa;
+}
+
+body div[type=join] .message:before {
+	content: "→";
+  	color: #0c0;
+  	margin-right: 3px;
+}
+
+body div[type=kick] .message:before,
+body div[type=part] .message:before,
+body div[type=quit] .message:before {
+	content: "←";
+  	color: #e00;
+  	margin-right: 3px;
+}
+
+body div[type=nick] .message:before {
+	content:"•";
+  	color: #0c0;
+  	margin-right: 3px;
+}
+
+/* mIRC Color Codes */
+
+.effect[color-number='0'] { color: #fff; }
+.effect[color-number='1'] { color: #000; }
+.effect[color-number='2'] { color: #008; }
+.effect[color-number='3'] { color: #080; }
+.effect[color-number='4'] { color: #f00; }
+.effect[color-number='5'] { color: #800; }
+.effect[color-number='6'] { color: #808; }
+.effect[color-number='7'] { color: #f80; }
+.effect[color-number='8'] { color: #ff0; }
+.effect[color-number='9'] { color: #0f0; }
+.effect[color-number='10'] { color: #088; }
+.effect[color-number='11'] { color: #0ff; }
+.effect[color-number='12'] { color: #00f; }
+.effect[color-number='13'] { color: #f0f; }
+.effect[color-number='14'] { color: #888; }
+.effect[color-number='15'] { color: #ccc; }
+.effect[bgcolor-number='0'] { background-color: #fff; }
+.effect[bgcolor-number='1'] { background-color: #000; }
+.effect[bgcolor-number='2'] { background-color: #008; }
+.effect[bgcolor-number='3'] { background-color: #080; }
+.effect[bgcolor-number='4'] { background-color: #f00; }
+.effect[bgcolor-number='5'] { background-color: #800; }
+.effect[bgcolor-number='6'] { background-color: #808; }
+.effect[bgcolor-number='7'] { background-color: #f80; }
+.effect[bgcolor-number='8'] { background-color: #ff0; }
+.effect[bgcolor-number='9'] { background-color: #0f0; }
+.effect[bgcolor-number='10'] { background-color: #088; }
+.effect[bgcolor-number='11'] { background-color: #0ff; }
+.effect[bgcolor-number='12'] { background-color: #00f; }
+.effect[bgcolor-number='13'] { background-color: #f0f; }
+.effect[bgcolor-number='14'] { background-color: #888; }
+.effect[bgcolor-number='15'] { background-color: #ccc; }
