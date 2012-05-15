@@ -170,7 +170,9 @@ b],f.body["scroll"+b],f.documentElement["scroll"+b],f.body["offset"+b],f.documen
 // *********************************
 
 function same_author(row) {
-  if (row.attr('type') == "privmsg" && row.attr('nick') == row.prev("[type='privmsg']").attr('nick')) {
+  var thisNick=row.find("span.sender").attr('nick');
+  var prevNick=row.prev("[type='privmsg']").find("span.sender").attr('nick');
+  if (thisNick == prevNick && typeof(thisNick) != typeof(undefined)) {
     row.addClass('repeating_author');
   }
 }
