@@ -15,7 +15,7 @@ Important notes and warnings:
 You need be using the default time stamps in this format:
 [%m/%d/%Y -:- %I:%M:%S %p]
 
-At this point Textual uses the the timestamp as set in the preferences for the
+At this point Textual uses the timestamp as set in the preferences for the
 logs. This theme is opinionated about time stamps and edits them via JS but
 expects them to start in this format.
 
